@@ -1,9 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToolkit", "ImageToolkit\ImageToolkit.csproj", "{339D4E4B-8E5D-4912-8E2E-6A258507824A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToolkit.WPF", "ImageToolkit.WPF\ImageToolkit.WPF.csproj", "{339D4E4B-8E5D-4912-8E2E-6A258507824A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToolkit.Launcher", "ImageToolkit.Launcher\ImageToolkit.Launcher.csproj", "{5639360F-DA5A-48F8-BD11-96C3A88BE2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToolkit.Crossplatform", "ImageToolkit.Crossplatform\ImageToolkit.Crossplatform.csproj", "{4188D790-315A-47D2-BB6C-DC418B42DB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageToolkit.API", "ImageToolkit.API\ImageToolkit.API.csproj", "{10430DC3-8161-48F2-AA3C-3543295962A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{339D4E4B-8E5D-4912-8E2E-6A258507824A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{339D4E4B-8E5D-4912-8E2E-6A258507824A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{339D4E4B-8E5D-4912-8E2E-6A258507824A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5639360F-DA5A-48F8-BD11-96C3A88BE2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5639360F-DA5A-48F8-BD11-96C3A88BE2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5639360F-DA5A-48F8-BD11-96C3A88BE2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5639360F-DA5A-48F8-BD11-96C3A88BE2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4188D790-315A-47D2-BB6C-DC418B42DB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4188D790-315A-47D2-BB6C-DC418B42DB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4188D790-315A-47D2-BB6C-DC418B42DB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4188D790-315A-47D2-BB6C-DC418B42DB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10430DC3-8161-48F2-AA3C-3543295962A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10430DC3-8161-48F2-AA3C-3543295962A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10430DC3-8161-48F2-AA3C-3543295962A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10430DC3-8161-48F2-AA3C-3543295962A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

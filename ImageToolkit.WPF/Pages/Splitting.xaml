@@ -1,0 +1,41 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:con="http://schemas.kent.boogaart.com/converters" x:Name="ucSplitting" x:Class="ImageToolkit.WPF.Pages.Splitting"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="500"
+    Loaded="ucSplitting_Loaded">
+    <!---Width="500" Height="500" -->
+    <!--- Width="{Binding Path=ActualWidth, ElementName=MainWindow}" Height="{Binding Path=ActualHeight, ElementName=MainWindow}" -->
+    <DockPanel x:Name="dpMain" Margin="16,28,16,16" VerticalAlignment="Stretch">
+        <ScrollViewer Margin="0,0,0,0">
+            <StackPanel x:Name="spMain">
+                <TextBlock Text="SPLITTING" Style="{StaticResource Heading2}" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="24" />
+                        <RowDefinition Height="100*" />
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="lblImagePath" Text="Select image path" Margin="0,2,0,2" TextAlignment="Center" />
+                    <Button Content="Browse..." Margin="0,0,0,0" Grid.Column="1" HorizontalAlignment="Stretch" />
+                    <Image x:Name="imgSplit" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" MinHeight="310" />
+                    <mui:ModernTab SelectedSource="/Content/SplitterSettings.xaml" Layout="Tab" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,31,0,0">
+                        <mui:ModernTab.Links>
+                            <mui:Link DisplayName="Horizontally" Source="/Content/SplitterSettings.xaml" />
+                            <mui:Link DisplayName="Vertically" Source="/Content/SplitterSettings.xaml" />
+                        </mui:ModernTab.Links>
+                    </mui:ModernTab>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>
