@@ -6,42 +6,44 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="ImageToolkit.Pages.Splitting"
              mc:Ignorable="d"
-             d:DesignHeight="500" d:DesignWidth="500" Width="{Binding Path=ActualWidth, ElementName=MainWindow}" Height="{Binding Path=ActualHeight, ElementName=MainWindow}" MinWidth="4" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-    <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <StackPanel MinWidth="468" Height="456">
+             d:DesignHeight="500" d:DesignWidth="500">
+    <!---Width="500" Height="500" -->
+    <!--- Width="{Binding Path=ActualWidth, ElementName=MainWindow}" Height="{Binding Path=ActualHeight, ElementName=MainWindow}" -->
+    <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,16">
+        <ScrollViewer Margin="0,0,0,0">
+            <StackPanel MinWidth="468" VerticalAlignment="Stretch">
                 <TextBlock Text="SPLITTING" Style="{StaticResource Heading2}" />
-                <Grid Height="466" Margin="0">
+                <Grid MinHeight="434">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="14*" />
+                        <RowDefinition Height="24" />
                         <RowDefinition Height="153*" />
                         <RowDefinition Height="66*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="181*" />
-                        <ColumnDefinition Width="87*" />
+                        <ColumnDefinition Width="100*" />
+                        <ColumnDefinition Width="100" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock x:Name="lblImagePath" Text="Select image path" Margin="0,4,86,0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Button Content="Browse..." Margin="0,0,-2,2" HorizontalAlignment="Right" Width="89" Grid.Column="1" />
-                    <Image HorizontalAlignment="Left" Grid.Row="1" Width="468" Grid.ColumnSpan="2" Height="300" VerticalAlignment="Top" />
-                    <TabControl HorizontalAlignment="Left" Height="95" Grid.Row="2" VerticalAlignment="Top" Width="458" Grid.ColumnSpan="2" Margin="0">
+                    <TextBlock x:Name="lblImagePath" Text="Select image path" Margin="0,2,0,2" TextAlignment="Center" />
+                    <Button Content="Browse..." Margin="0,0,0,0" Grid.Column="1" HorizontalAlignment="Stretch" />
+                    <Image Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" />
+                    <TabControl Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,0,0">
                         <TabItem Header="Horizontally">
                             <Grid Background="#FFE5E5E5" />
                         </TabItem>
-                        <TabItem Header="Vertically                                  " Margin="-2,-2,108,0">
+                        <TabItem Header="Vertically">
                             <Grid Background="#FFE5E5E5">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="31*" />
-                                    <ColumnDefinition Width="82*" />
+                                    <ColumnDefinition Width="120" />
+                                    <ColumnDefinition Width="100*" />
                                 </Grid.ColumnDefinitions>
                                 <RadioButton Content="Quantity of blocks" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Height="17" Width="124" />
                                 <Label Content="Split by..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="16" />
                                 <RadioButton Content="Height of blocks" HorizontalAlignment="Left" Margin="0,33,0,0" VerticalAlignment="Top" Height="17" Width="124" />
                                 <Label Content="Quantity of blocks" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="16" Grid.Column="1" Margin="10,0,0,0" />
-                                <xctk:IntegerUpDown Grid.Column="1" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="308" />
+                                <xctk:IntegerUpDown Grid.Column="1" Margin="10,21,17,0" VerticalAlignment="Top" />
                                 <CheckBox x:Name="chkOverlapping" Content="Overlap blocks" Grid.Column="1" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="104" Checked="chkOverlapping_Checked" Loaded="chkOverlapping_Loaded" />
-                                <xctk:IntegerUpDown x:Name="udOverlapping" Grid.Column="1" HorizontalAlignment="Left" Margin="119,46,0,0" VerticalAlignment="Top" Width="107" />
-                                <Label x:Name="lblOverlapping" Content="overlapping (px)" Grid.Column="1" HorizontalAlignment="Left" Margin="231,47,0,0" VerticalAlignment="Top" Width="87" />
+                                <xctk:IntegerUpDown x:Name="udOverlapping" Grid.Column="1" Margin="119,46,109,0" VerticalAlignment="Top" />
+                                <Label x:Name="lblOverlapping" Content="overlapping (px)" Grid.Column="1" Margin="0,47,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="94" />
                             </Grid>
                         </TabItem>
                     </TabControl>
