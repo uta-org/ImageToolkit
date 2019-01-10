@@ -25,17 +25,10 @@ namespace ImageToolkit.Pages
             InitializeComponent();
         }
 
-        private void chkOverlapping_Checked(object sender, RoutedEventArgs e)
+        private void ucSplitting_Loaded(object sender, RoutedEventArgs e)
         {
-            var visibility = chkOverlapping.IsChecked.Value ? Visibility.Visible : Visibility.Hidden;
-            udOverlapping.Visibility = visibility;
-            lblOverlapping.Visibility = visibility;
-        }
-
-        private void chkOverlapping_Loaded(object sender, RoutedEventArgs e)
-        {
-            udOverlapping.Visibility = Visibility.Hidden;
-            lblOverlapping.Visibility = Visibility.Hidden;
+            // Do this when resizing app...
+            imgSplit.MinHeight = ucSplitting.ActualHeight - 250;
         }
     }
 }
