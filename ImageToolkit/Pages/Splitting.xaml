@@ -1,0 +1,52 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="ImageToolkit.Pages.Splitting"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="500" Width="{Binding Path=ActualWidth, ElementName=MainWindow}" Height="{Binding Path=ActualHeight, ElementName=MainWindow}" MinWidth="4" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="468" Height="456">
+                <TextBlock Text="SPLITTING" Style="{StaticResource Heading2}" />
+                <Grid Height="466" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="14*" />
+                        <RowDefinition Height="153*" />
+                        <RowDefinition Height="66*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="181*" />
+                        <ColumnDefinition Width="87*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="lblImagePath" Text="Select image path" Margin="0,4,86,0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    <Button Content="Browse..." Margin="0,0,-2,2" HorizontalAlignment="Right" Width="89" Grid.Column="1" />
+                    <Image HorizontalAlignment="Left" Grid.Row="1" Width="468" Grid.ColumnSpan="2" Height="300" VerticalAlignment="Top" />
+                    <TabControl HorizontalAlignment="Left" Height="95" Grid.Row="2" VerticalAlignment="Top" Width="458" Grid.ColumnSpan="2" Margin="0">
+                        <TabItem Header="Horizontally">
+                            <Grid Background="#FFE5E5E5" />
+                        </TabItem>
+                        <TabItem Header="Vertically                                  " Margin="-2,-2,108,0">
+                            <Grid Background="#FFE5E5E5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="31*" />
+                                    <ColumnDefinition Width="82*" />
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Content="Quantity of blocks" HorizontalAlignment="Left" Margin="0,16,0,0" VerticalAlignment="Top" Height="17" Width="124" />
+                                <Label Content="Split by..." HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="16" />
+                                <RadioButton Content="Height of blocks" HorizontalAlignment="Left" Margin="0,33,0,0" VerticalAlignment="Top" Height="17" Width="124" />
+                                <Label Content="Quantity of blocks" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="16" Grid.Column="1" Margin="10,0,0,0" />
+                                <xctk:IntegerUpDown Grid.Column="1" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="308" />
+                                <CheckBox x:Name="chkOverlapping" Content="Overlap blocks" Grid.Column="1" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="104" Checked="chkOverlapping_Checked" Loaded="chkOverlapping_Loaded" />
+                                <xctk:IntegerUpDown x:Name="udOverlapping" Grid.Column="1" HorizontalAlignment="Left" Margin="119,46,0,0" VerticalAlignment="Top" Width="107" />
+                                <Label x:Name="lblOverlapping" Content="overlapping (px)" Grid.Column="1" HorizontalAlignment="Left" Margin="231,47,0,0" VerticalAlignment="Top" Width="87" />
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
